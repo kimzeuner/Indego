@@ -24,7 +24,7 @@
         }
     },
     "options": {
-      "step": {
+       "step": {
           "init": {
               "title": "Advanced settings",
               "description": "Advanced settings of the Bosch Indego component. You might have to reload the component after changing these settings.",
@@ -34,7 +34,7 @@
                   "expose_vacuum": "Expose Indego mower as vacuum entity in HomeAssistant"
               }
           }
-      }
+       }
     },
     "services": {
         "command": {

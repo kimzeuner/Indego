@@ -40,7 +40,49 @@
         "sensor": {
             "indego_alert": {
                 "state": {
-                    "No problem": "Aucun problème"
+                    "No problem": "Aucun problème",
+                    "Mower is stuck": "",
+                    "Mower lifted": "",
+                    "Mower outside perimeter cable": "",
+                    "Perimeter cable signal missing": "",
+                    "Stop button pushed": ""
+                }
+            },
+            "mower_state": {
+                "state": {
+                    "Mowing": "",
+                    "Docked": "",
+                    "Sleeping": "",
+                    "Paused": ""
+                }
+            },
+            "mower_state_detail": {
+                "state": {
+                    "Reading status": "",
+                    "Charging": "",
+                    "Docked": "",
+                    "Docked - Software update": "",
+                    "Docked - Loading map": "",
+                    "Docked - Saving map": "",
+                    "Docked - Leaving Dock": "",
+                    "Mowing": "",
+                    "Mowing - Relocalising": "",
+                    "Mowing - Learning Lawn": "",
+                    "Mowing - Learning Lawn paused": "",
+                    "Relocalising": "",
+                    "Loading map": "",
+                    "Learning lawn": "",
+                    "Paused": "",
+                    "Border cut": "",
+                    "Idle in lawn": "",
+                    "Stuck on lawn, help needed": "",
+                    "Returning to Dock": "",
+                    "Returning to Dock - Battery low": "",
+                    "Returning to dock - Calendar timeslot ended": "",
+                    "Returning to dock - Battery temp range": "",
+                    "Returning to dock - Lawn complete": "",
+                    "Returning to dock - Relocalising": "",
+                    "Returning to dock - requested by user/app": ""
                 }
             }
         }

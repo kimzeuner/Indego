@@ -79,6 +79,11 @@ def FUNC_ICON_MOWER_ALERT(state):
         if int(state) > 0 or state == STATE_ON:
             return "mdi:alert-outline"
     return "mdi:check-circle-outline"
+def FUNC_ICON_SERVICE(state):
+    if state:
+        if state == STATE_ON:
+            return "mdi:wrench"
+    return "mdi:wrench-check"
 
 
 ENTITY_DEFINITIONS = {

@@ -33,6 +33,7 @@ from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.config_entry_oauth2_flow import async_get_config_entry_implementation
 from homeassistant.helpers.event import async_track_point_in_time
 from pyIndego import IndegoAsyncClient
+from svgutils.transform import fromstring
 
 from .api import IndegoOAuth2Session
 from .binary_sensor import IndegoBinarySensor
@@ -40,6 +41,7 @@ from .vacuum import IndegoVacuum
 from .lawn_mower import IndegoLawnMower
 from .const import *
 from .sensor import IndegoSensor
+from .camera import IndegoCamera
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -138,6 +140,9 @@ ENTITY_DEFINITIONS = {
             f"battery_temp_{UnitOfTemperature.CELSIUS}",
             f"ambient_temp_{UnitOfTemperature.CELSIUS}",
         ],
+    },
+    ENTITY_CAMERA: {
+        CONF_TYPE: CAMERA_TYPE,
     },
     ENTITY_LAWN_MOWED: {
         CONF_TYPE: SENSOR_TYPE,
@@ -408,6 +413,7 @@ class IndegoHub:
         self._refresh_24h_remover = None
         self._shutdown = False
         self._latest_alert = None
+        self._lawn_map = None
         self.entities = {}
         self._update_fail_count = None
 
@@ -475,6 +481,14 @@ class IndegoHub:
                         device_info,
                         self
                     )
+                    
+            elif entity[CONF_TYPE] == CAMERA_TYPE:
+                self.entities[entity_key] = IndegoCamera(
+                    f"indego_{self._serial}",
+                    self._mower_name,
+                    device_info,
+                    self
+                )
 
     async def update_generic_data_and_load_platforms(self, load_platforms):
         """Update the generic mower data, so we can create the HA platforms for the Indego component."""
@@ -644,6 +658,25 @@ class IndegoHub:
 
         self._refresh_24h_remover = async_call_later(self._hass, 86400, self.refresh_24h)
 
+    async def download_map(self, force_refresh_map=False):
+        if self._lawn_map is None or force_refresh_map:
+            try:
+                self._lawn_map = await self._indego_client.get(f"alms/{self._indego_client.serial}/map")
+            except Exception as e:
+                _LOGGER.info("Get map got an exception: %s", e)
+        if self._lawn_map and self._indego_client.state:
+            try:
+                await self._indego_client.update_state(force=True)
+            except Exception as e:
+                _LOGGER.info("Update state force got an exception: %s", e)
+            svg = fromstring(self._lawn_map.decode("utf-8").replace('#FAFAFA', 'transparent').replace('#CCCCCC', 'transparent'))
+            xpos = self._indego_client.state.svg_xPos
+            ypos = self._indego_client.state.svg_yPos
+            circle = f'<circle cx="{xpos}" cy="{ypos}" r="15" fill="yellow" />'
+            mower_circle = fromstring(circle)
+            svg.append(mower_circle)
+            return svg.to_str()
+
     async def _update_operating_data(self):
         await self._indego_client.update_operating_data()
 
@@ -726,6 +759,10 @@ class IndegoHub:
                 "total_mowing_time_h": self._indego_client.state.runtime.total.cut,
                 "total_charging_time_h": self._indego_client.state.runtime.total.charge,
             }
+        )
+        
+        self.entities[ENTITY_CAMERA].is_streaming = (
+            False if self._indego_client.state_description == "Docked" else True
         )
 
         if ENTITY_VACUUM in self.entities:

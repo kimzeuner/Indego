@@ -812,6 +812,15 @@ class IndegoHub:
                 self.entities[
                     ENTITY_MOWING_MODE
                 ].state = self._indego_client.generic_data.mowing_mode_description
+            if ENTITY_SERVICE in self.entities:
+                self.entities[
+                    ENTITY_SERVICE
+                ].state = self._indego_client.generic_data.needs_service
+                self.entities[ENTITY_SERVICE].add_attributes(
+                    {
+                        "service_counter": self._indego_client.generic_data.service_counter,
+                    }
+                )
 
         return self._indego_client.generic_data
 

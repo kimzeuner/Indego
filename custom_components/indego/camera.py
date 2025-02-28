@@ -54,10 +54,10 @@ class IndegoCamera(IndegoEntity, Camera):
         if self._svg_map is None or self.is_streaming and (time.time() - self._last_update_time) > self.frame_interval:
             _LOGGER.debug("Sync map")
             self._last_update_time = time.time()
-            self._svg_map = await self._indego_hub.download_map(self._svg_map is None)
+            self._svg_map = await self._indego_hub.download_map()
         return self._svg_map
 
-    @Camera.is_streaming.setter
+
     def is_streaming(self, is_streaming: bool):
         if not is_streaming and self._attr_is_streaming:
             _LOGGER.debug("Streaming updated to %s, forcing reload of map", is_streaming)
@@ -65,3 +65,4 @@ class IndegoCamera(IndegoEntity, Camera):
         if self._attr_is_streaming != bool(is_streaming):
             self._attr_is_streaming = bool(is_streaming)
             self.async_write_ha_state()
+

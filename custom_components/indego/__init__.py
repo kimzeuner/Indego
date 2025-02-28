@@ -201,6 +201,31 @@ ENTITY_DEFINITIONS = {
     ENTITY_LAWN_MOWER: {
         CONF_TYPE: LAWN_MOWER_TYPE,
     },
+    ENTITY_CALENDAR: {
+        CONF_TYPE: SENSOR_TYPE,
+        CONF_NAME: "calendar",
+        CONF_ICON: "mdi:calendar",
+        CONF_DEVICE_CLASS: None,
+        CONF_UNIT_OF_MEASUREMENT: None,
+        CONF_ATTR: [],
+        CONF_TRANSLATION_KEY: "calendar",
+    },
+    ENTITY_SERVICE: {
+        CONF_TYPE: BINARY_SENSOR_TYPE,
+        CONF_NAME: "service",
+        CONF_ICON: FUNC_ICON_SERVICE,
+        CONF_DEVICE_CLASS: BinarySensorDeviceClass.PROBLEM,
+        CONF_UNIT_OF_MEASUREMENT: None,
+        CONF_ATTR: ["service_counter"],
+    },
+    ENTITY_GARDEN_SIZE: {
+        CONF_TYPE: SENSOR_TYPE,
+        CONF_NAME: "garden size",
+        CONF_ICON: "mdi:ruler-square",
+        CONF_DEVICE_CLASS: None,
+        CONF_UNIT_OF_MEASUREMENT: "m²",
+        CONF_ATTR: [],
+    },
 }
 
 
@@ -686,6 +711,8 @@ class IndegoHub:
 
             if ENTITY_VACUUM in self.entities:
                 self.entities[ENTITY_VACUUM].battery_level = self._indego_client.operating_data.battery.percent_adjusted
+                
+            self.entities[ENTITY_GARDEN_SIZE].state = self._indego_client.operating_data.garden.size
 
             self.entities[ENTITY_BATTERY].add_attributes(
                 {
@@ -858,6 +885,38 @@ class IndegoHub:
                 {"next_mow": next_mow}
             )
 
+    async def _update_calendar(self):
+        await self._indego_client.update_calendar()
+            
+        if self._indego_client.calendar:
+
+            if self.entities[ENTITY_MOWING_MODE].state == "Manual":
+                self.entities[ENTITY_CALENDAR].state = "No calendar configured"
+                self.entities[ENTITY_CALENDAR].clear_attributes()
+            elif self._indego_client.calendar.cal == 3:
+                self.entities[ENTITY_CALENDAR].state = "No mowing days planned"
+                self.entities[ENTITY_CALENDAR].clear_attributes()
+            elif self._indego_client.calendar.cal == 2 and len(self._indego_client.calendar.days) == 1:
+                self.entities[ENTITY_CALENDAR].state = f"{len(self._indego_client.calendar.days)} mowing day planned"
+                list_days = self._indego_client.calendar.days
+                len_days = len(list_days)
+                for i in range(len_days):
+                    self.entities[ENTITY_CALENDAR].add_attributes(
+                        {
+                            list_days[i].day_name: list_days[i].slots,
+                        }
+                    )
+            else:
+                self.entities[ENTITY_CALENDAR].state = f"{len(self._indego_client.calendar.days)} mowing days planned"
+                list_days = self._indego_client.calendar.days
+                len_days = len(list_days)
+                for i in range(len_days):
+                    self.entities[ENTITY_CALENDAR].add_attributes(
+                        {
+                            list_days[i].day_name: list_days[i].slots,
+                        }
+                    )
+    
     @property
     def serial(self) -> str:
         return self._serial

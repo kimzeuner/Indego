@@ -555,7 +555,12 @@
             "description": "Wyślij polecenia do kosiarki. Wybierz polecenie.",
             "fields": {
                 "mower_serial": {
+                    "name": "Numer seryjny",
                     "description": "Numer seryjny kosiarki. Wymagany tylko gdy konfigurujesz wiele kosiarek."
+                },
+                "mower_entity": {
+                    "name": "Kosiarka",
+                    "description": "Encja kosiarki. Wymagana tylko wtedy, gdy skonfigurowano więcej niż jedną kosiarkę."
                 },
                 "command": {
                     "name": "Wyślij polecenie",
@@ -568,7 +573,12 @@
             "description": "Włącz lub wyłącz tryb SmartMowing. Dostępne wartości to true lub false.",
             "fields": {
                 "mower_serial": {
+                    "name": "Numer seryjny",
                     "description": "Numer seryjny kosiarki. Wymagany tylko gdy konfigurujesz wiele kosiarek."
+                },
+                "mower_entity": {
+                    "name": "Kosiarka",
+                    "description": "Encja kosiarki. Wymagana tylko wtedy, gdy skonfigurowano więcej niż jedną kosiarkę."
                 },
                 "enable": {
                     "description": "Włącz tryb SmartMowing."
@@ -580,7 +590,12 @@
             "description": "Usuń zaznaczony alert.",
             "fields": {
                 "mower_serial": {
+                    "name": "Numer seryjny",
                     "description": "Numer seryjny kosiarki. Wymagany tylko gdy konfigurujesz wiele kosiarek."
+                },
+                "mower_entity": {
+                    "name": "Kosiarka",
+                    "description": "Encja kosiarki. Wymagana tylko wtedy, gdy skonfigurowano więcej niż jedną kosiarkę."
                 },
                 "alert_index": {
                     "description": "Usuń zaznaczony alert. 0 dla ostatniego alertu."
@@ -592,7 +607,12 @@
             "description": "Usuń wszystkie alerty.",
             "fields": {
                 "mower_serial": {
+                    "name": "Numer seryjny",
                     "description": "Numer seryjny kosiarki. Wymagany tylko gdy konfigurujesz wiele kosiarek."
+                },
+                "mower_entity": {
+                    "name": "Kosiarka",
+                    "description": "Encja kosiarki. Wymagana tylko wtedy, gdy skonfigurowano więcej niż jedną kosiarkę."
                 }
             }
         },
@@ -601,7 +621,12 @@
             "description": "Oznacz alert jako przeczytany.",
             "fields": {
                 "mower_serial": {
+                    "name": "Numer seryjny",
                     "description": "Numer seryjny kosiarki. Wymagany tylko gdy konfigurujesz wiele kosiarek."
+                },
+                "mower_entity": {
+                    "name": "Kosiarka",
+                    "description": "Encja kosiarki. Wymagana tylko wtedy, gdy skonfigurowano więcej niż jedną kosiarkę."
                 },
                 "alert_index": {
                     "description": "Oznacz wybrany alert jako przeczytany. 0 dla ostatniego alertu."
@@ -613,7 +638,12 @@
             "description": "Oznacz wszystkie alerty jako przeczytane.",
             "fields": {
                 "mower_serial": {
+                    "name": "Numer seryjny",
                     "description": "Numer seryjny kosiarki. Wymagany tylko gdy konfigurujesz wiele kosiarek."
+                },
+                "mower_entity": {
+                    "name": "Kosiarka",
+                    "description": "Encja kosiarki. Wymagana tylko wtedy, gdy skonfigurowano więcej niż jedną kosiarkę."
                 }
             }
         },
@@ -622,7 +652,12 @@
             "description": "Pobiera aktualną mapę koszenia z API Bosch Cloud i zapisuje ją lokalnie jako \"www/indego_map_base.svg\". Mapa odzwierciedla ostatnio zapisaną trasę koszenia.",
             "fields": {
                 "mower_serial": {
+                    "name": "Numer seryjny",
                     "description": "Numer seryjny kosiarki. Wymagany tylko gdy konfigurujesz wiele kosiarek."
+                },
+                "mower_entity": {
+                    "name": "Kosiarka",
+                    "description": "Encja kosiarki. Wymagana tylko wtedy, gdy skonfigurowano więcej niż jedną kosiarkę."
                 }
             }
         },
@@ -633,6 +668,10 @@
                 "mower_serial": {
                     "name": "Numer seryjny",
                     "description": "Numer seryjny kosiarki. Wymagany tylko wtedy, gdy skonfigurowano kilka kosiarek."
+                },
+                "mower_entity": {
+                    "name": "Kosiarka",
+                    "description": "Encja kosiarki. Wymagana tylko wtedy, gdy skonfigurowano więcej niż jedną kosiarkę."
                 },
                 "calendar_type": {
                     "name": "Typ kalendarza",

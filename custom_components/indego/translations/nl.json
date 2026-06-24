@@ -555,7 +555,12 @@
             "description": "Stuur commando's naar de grasmaaier. Selecteer een commando.",
             "fields": {
                 "mower_serial": {
+                    "name": "Serienummer",
                     "description": "Grasmaaier serienummer. Alleen nodig wanneer je meerdere grasmaaiers hebt geconfigureerd."
+                },
+                "mower_entity": {
+                    "name": "Maaier",
+                    "description": "Entiteit van de maaier. Alleen nodig als meerdere maaiers zijn geconfigureerd."
                 },
                 "command": {
                     "name": "Stuur commando",
@@ -568,7 +573,12 @@
             "description": "Schakel SmartMowing in of uit. Ondersteunde waardes zijn: true of false.",
             "fields": {
                 "mower_serial": {
+                    "name": "Serienummer",
                     "description": "Grasmaaier serienummer. Alleen nodig wanneer je meerdere grasmaaiers hebt geconfigureerd."
+                },
+                "mower_entity": {
+                    "name": "Maaier",
+                    "description": "Entiteit van de maaier. Alleen nodig als meerdere maaiers zijn geconfigureerd."
                 },
                 "enable": {
                     "description": "Schakel SmartMowing in of uit."
@@ -580,7 +590,12 @@
             "description": "Verwijder een specifieke melding.",
             "fields": {
                 "mower_serial": {
+                    "name": "Serienummer",
                     "description": "Grasmaaier serienummer. Alleen nodig wanneer je meerdere grasmaaiers hebt geconfigureerd."
+                },
+                "mower_entity": {
+                    "name": "Maaier",
+                    "description": "Entiteit van de maaier. Alleen nodig als meerdere maaiers zijn geconfigureerd."
                 },
                 "alert_index": {
                     "description": "De index van de melding. 0 is het nieuwste bericht."
@@ -592,7 +607,12 @@
             "description": "Verwijder alle meldingen.",
             "fields": {
                 "mower_serial": {
+                    "name": "Serienummer",
                     "description": "Grasmaaier serienummer. Alleen nodig wanneer je meerdere grasmaaiers hebt geconfigureerd."
+                },
+                "mower_entity": {
+                    "name": "Maaier",
+                    "description": "Entiteit van de maaier. Alleen nodig als meerdere maaiers zijn geconfigureerd."
                 }
             }
         },
@@ -601,7 +621,12 @@
             "description": "Markeer een specifieke melding als gelezen.",
             "fields": {
                 "mower_serial": {
+                    "name": "Serienummer",
                     "description": "Grasmaaier serienummer. Alleen nodig wanneer je meerdere grasmaaiers hebt geconfigureerd."
+                },
+                "mower_entity": {
+                    "name": "Maaier",
+                    "description": "Entiteit van de maaier. Alleen nodig als meerdere maaiers zijn geconfigureerd."
                 },
                 "alert_index": {
                     "description": "De index van de melding. 0 is het nieuwste bericht."
@@ -613,7 +638,12 @@
             "description": "Markeer alle meldingen als gelezen.",
             "fields": {
                 "mower_serial": {
+                    "name": "Serienummer",
                     "description": "Grasmaaier serienummer. Alleen nodig wanneer je meerdere grasmaaiers hebt geconfigureerd."
+                },
+                "mower_entity": {
+                    "name": "Maaier",
+                    "description": "Entiteit van de maaier. Alleen nodig als meerdere maaiers zijn geconfigureerd."
                 }
             }
         },
@@ -622,7 +652,12 @@
             "description": "Downloaded de huidge maaikaart van de Bosch Cloud API en slaat deze lokaal op als \"www/indego_map_base.svg\". De kaart weerspiegelt de laatst opgenomen maairoute.",
             "fields": {
                 "mower_serial": {
+                    "name": "Serienummer",
                     "description": "Grasmaaier serienummer. Alleen nodig wanneer je meerdere grasmaaiers hebt geconfigureerd."
+                },
+                "mower_entity": {
+                    "name": "Maaier",
+                    "description": "Entiteit van de maaier. Alleen nodig als meerdere maaiers zijn geconfigureerd."
                 }
             }
         },
@@ -633,6 +668,10 @@
                 "mower_serial": {
                     "name": "Serienummer",
                     "description": "Serienummer van de grasmaaier. Alleen nodig als er meerdere grasmaaiers zijn geconfigureerd."
+                },
+                "mower_entity": {
+                    "name": "Maaier",
+                    "description": "Entiteit van de maaier. Alleen nodig als meerdere maaiers zijn geconfigureerd."
                 },
                 "calendar_type": {
                     "name": "Kalendertype",

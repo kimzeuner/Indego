@@ -555,7 +555,12 @@
             "description": "Enviar comandos al cortacésped. Seleccione un comando.",
             "fields": {
                 "mower_serial": {
+                    "name": "Número de serie",
                     "description": "Número de serie del robot. Solo es necesario cuando tiene configurados varios robots cortacéspedes."
+                },
+                "mower_entity": {
+                    "name": "Cortacésped",
+                    "description": "Entidad del cortacésped. Solo es necesaria si hay varios cortacéspedes configurados."
                 },
                 "command": {
                     "name": "Enviar comando",
@@ -568,7 +573,12 @@
             "description": "Habilitar o deshabilitar SmartMowing. Los valores permitidos son true o false.",
             "fields": {
                 "mower_serial": {
+                    "name": "Número de serie",
                     "description": "Número de serie del robot. Solo es necesario cuando tiene configurados varios robots cortacéspedes."
+                },
+                "mower_entity": {
+                    "name": "Cortacésped",
+                    "description": "Entidad del cortacésped. Solo es necesaria si hay varios cortacéspedes configurados."
                 },
                 "enable": {
                     "description": "Habilitar SmartMowing."
@@ -580,7 +590,12 @@
             "description": "Eliminar la alerta seleccionada.",
             "fields": {
                 "mower_serial": {
+                    "name": "Número de serie",
                     "description": "Número de serie del robot. Solo es necesario cuando tiene configurados varios robots cortacéspedes."
+                },
+                "mower_entity": {
+                    "name": "Cortacésped",
+                    "description": "Entidad del cortacésped. Solo es necesaria si hay varios cortacéspedes configurados."
                 },
                 "alert_index": {
                     "description": "Eliminar la alerta seleccionada. 0 para la alerta más reciente."
@@ -592,7 +607,12 @@
             "description": "Eliminar todas las alertas.",
             "fields": {
                 "mower_serial": {
+                    "name": "Número de serie",
                     "description": "Número de serie del robot. Solo es necesario cuando tiene configurados varios robots cortacéspedes."
+                },
+                "mower_entity": {
+                    "name": "Cortacésped",
+                    "description": "Entidad del cortacésped. Solo es necesaria si hay varios cortacéspedes configurados."
                 }
             }
         },
@@ -601,7 +621,12 @@
             "description": "Marcar la alerta seleccionada como leída.",
             "fields": {
                 "mower_serial": {
+                    "name": "Número de serie",
                     "description": "Número de serie del robot. Solo es necesario cuando tiene configurados varios robots cortacéspedes."
+                },
+                "mower_entity": {
+                    "name": "Cortacésped",
+                    "description": "Entidad del cortacésped. Solo es necesaria si hay varios cortacéspedes configurados."
                 },
                 "alert_index": {
                     "description": "Marcar la alerta seleccionada como leída. 0 para la alerta más reciente."
@@ -613,7 +638,12 @@
             "description": "Marcar todas las alertas como leídas.",
             "fields": {
                 "mower_serial": {
+                    "name": "Número de serie",
                     "description": "Número de serie del robot. Solo es necesario cuando tiene configurados varios robots cortacéspedes."
+                },
+                "mower_entity": {
+                    "name": "Cortacésped",
+                    "description": "Entidad del cortacésped. Solo es necesaria si hay varios cortacéspedes configurados."
                 }
             }
         },
@@ -622,8 +652,13 @@
             "description": "Descarga el mapa de corte actual desde la API de Bosch Cloud y lo guarda localmente como \"www/indego_map_base.svg\". El mapa refleja la ruta de corte más recientemente registrada.",
             "fields": {
                 "mower_serial": {
+                    "name": "Número de serie",
                     "description": "Número de serie del robot. Solo es necesario cuando tiene configurados varios robots cortacéspedes."
-                }
+                },
+                "mower_entity": {
+                    "name": "Cortacésped",
+                    "description": "Entidad del cortacésped. Solo es necesaria si hay varios cortacéspedes configurados."
+                },
             }
         },
         "set_calendar_slot": {
@@ -633,6 +668,10 @@
                 "mower_serial": {
                     "name": "Número de serie",
                     "description": "Número de serie del cortacésped. Solo es necesario si hay varios cortacéspedes configurados."
+                },
+                "mower_entity": {
+                    "name": "Cortacésped",
+                    "description": "Entidad del cortacésped. Solo es necesaria si hay varios cortacéspedes configurados."
                 },
                 "calendar_type": {
                     "name": "Tipo de calendario",

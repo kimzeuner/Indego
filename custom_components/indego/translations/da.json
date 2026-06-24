@@ -558,6 +558,10 @@
                     "name": "Serienummer",
                     "description": "Græsslåmaskine serienummer. Kun nødvendigt, når du har konfigureret flere græsslåmaskiner."
                 },
+                "mower_entity": {
+                    "name": "Plæneklipper",
+                    "description": "Entitet for plæneklipperen. Kun nødvendig hvis flere plæneklippere er konfigureret."
+                },
                 "command": {
                     "name": "Send kommando",
                     "description": "Send kommandoer til græsslåmaskinen. Vælg en kommando."
@@ -571,6 +575,10 @@
                 "mower_serial": {
                     "name": "Serienummer",
                     "description": "Græsslåmaskine serienummer. Kun nødvendigt, når du har konfigureret flere græsslåmaskiner."
+                },
+                "mower_entity": {
+                    "name": "Plæneklipper",
+                    "description": "Entitet for plæneklipperen. Kun nødvendig hvis flere plæneklippere er konfigureret."
                 },
                 "enable": {
                     "name": "Aktivér",
@@ -586,6 +594,10 @@
                     "name": "Serienummer",
                     "description": "Græsslåmaskine serienummer. Kun nødvendigt, når du har konfigureret flere græsslåmaskiner."
                 },
+                "mower_entity": {
+                    "name": "Plæneklipper",
+                    "description": "Entitet for plæneklipperen. Kun nødvendig hvis flere plæneklippere er konfigureret."
+                },
                 "alert_index": {
                     "name": "Advarselsindeks",
                     "description": "Slet den valgte advarsel. 0 for den seneste advarsel."
@@ -599,6 +611,10 @@
                 "mower_serial": {
                     "name": "Serienummer",
                     "description": "Græsslåmaskine serienummer. Kun nødvendigt, når du har konfigureret flere græsslåmaskiner."
+                },
+                "mower_entity": {
+                    "name": "Plæneklipper",
+                    "description": "Entitet for plæneklipperen. Kun nødvendig hvis flere plæneklippere er konfigureret."
                 }
             }
         },
@@ -609,6 +625,10 @@
                 "mower_serial": {
                     "name": "Serienummer",
                     "description": "Græsslåmaskine serienummer. Kun nødvendigt, når du har konfigureret flere græsslåmaskiner."
+                },
+                "mower_entity": {
+                    "name": "Plæneklipper",
+                    "description": "Entitet for plæneklipperen. Kun nødvendig hvis flere plæneklippere er konfigureret."
                 },
                 "alert_index": {
                     "name": "Advarselsindeks",
@@ -623,6 +643,10 @@
                 "mower_serial": {
                     "name": "Serienummer",
                     "description": "Græsslåmaskine serienummer. Kun nødvendigt, når du har konfigureret flere græsslåmaskiner."
+                },
+                "mower_entity": {
+                    "name": "Plæneklipper",
+                    "description": "Entitet for plæneklipperen. Kun nødvendig hvis flere plæneklippere er konfigureret."
                 }
             }
         },
@@ -633,6 +657,10 @@
                 "mower_serial": {
                     "name": "Serienummer",
                     "description": "Græsslåmaskine serienummer. Kun nødvendigt, når du har konfigureret flere græsslåmaskiner."
+                },
+                "mower_entity": {
+                    "name": "Plæneklipper",
+                    "description": "Entitet for plæneklipperen. Kun nødvendig hvis flere plæneklippere er konfigureret."
                 }
             }
         },
@@ -643,6 +671,10 @@
                 "mower_serial": {
                     "name": "Serienummer",
                     "description": "Serienummer på plæneklipperen. Kun nødvendig, hvis der er konfigureret flere plæneklippere."
+                },
+                "mower_entity": {
+                    "name": "Plæneklipper",
+                    "description": "Entitet for plæneklipperen. Kun nødvendig hvis flere plæneklippere er konfigureret."
                 },
                 "calendar_type": {
                     "name": "Kalendertype",

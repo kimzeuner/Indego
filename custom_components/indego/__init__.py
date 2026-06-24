@@ -64,38 +64,46 @@ _LOGGER = logging.getLogger(__name__)
 
 SERVICE_SCHEMA_COMMAND = vol.Schema({
     vol.Optional(CONF_MOWER_SERIAL): cv.string,
+    vol.Optional(CONF_MOWER_ENTITY): cv.entity_id,
     vol.Required(CONF_SEND_COMMAND): cv.string
 })
 
 SERVICE_SCHEMA_SMARTMOWING = vol.Schema({
     vol.Optional(CONF_MOWER_SERIAL): cv.string,
+    vol.Optional(CONF_MOWER_ENTITY): cv.entity_id,
     vol.Required(CONF_SMARTMOWING): cv.boolean
 })
 
 SERVICE_SCHEMA_DELETE_ALERT = vol.Schema({
     vol.Optional(CONF_MOWER_SERIAL): cv.string,
+    vol.Optional(CONF_MOWER_ENTITY): cv.entity_id,
     vol.Required(SERVER_DATA_ALERT_INDEX): cv.positive_int
 })
 
 SERVICE_SCHEMA_DELETE_ALERT_ALL = vol.Schema({
-    vol.Optional(CONF_MOWER_SERIAL): cv.string
+    vol.Optional(CONF_MOWER_SERIAL): cv.string,
+    vol.Optional(CONF_MOWER_ENTITY): cv.entity_id
 })
 
 SERVICE_SCHEMA_READ_ALERT = vol.Schema({
     vol.Optional(CONF_MOWER_SERIAL): cv.string,
+    vol.Optional(CONF_MOWER_ENTITY): cv.entity_id,
     vol.Required(SERVER_DATA_ALERT_INDEX): cv.positive_int
 })
 
 SERVICE_SCHEMA_READ_ALERT_ALL = vol.Schema({
-    vol.Optional(CONF_MOWER_SERIAL): cv.string
+    vol.Optional(CONF_MOWER_SERIAL): cv.string,
+    vol.Optional(CONF_MOWER_ENTITY): cv.entity_id
 })
 
 SERVICE_SCHEMA_DOWNLOAD_MAP = vol.Schema({
-    vol.Optional(CONF_MOWER_SERIAL): cv.string
+    vol.Optional(CONF_MOWER_SERIAL): cv.string,
+    vol.Optional(CONF_MOWER_ENTITY): cv.entity_id
 })
 
 SERVICE_SCHEMA_SET_CALENDAR_SLOT = vol.Schema({
     vol.Optional(CONF_MOWER_SERIAL): cv.string,
+    vol.Optional(CONF_MOWER_ENTITY): cv.entity_id,
     vol.Required(CONF_DAYS): vol.All(
         cv.ensure_list,
         [vol.In([
@@ -111,6 +119,7 @@ SERVICE_SCHEMA_SET_CALENDAR_SLOT = vol.Schema({
 
 SERVICE_SCHEMA_SET_PREDICTIVE_MOWING_WINDOW = vol.Schema({
     vol.Optional(CONF_MOWER_SERIAL): cv.string,
+    vol.Optional(CONF_MOWER_ENTITY): cv.entity_id,
     vol.Required(CONF_EARLIEST_START): cv.string,
     vol.Required(CONF_LATEST_END): cv.string,
 })
@@ -1064,19 +1073,36 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         _LOGGER.warning("Error setting up features: %s", err)
 
     def find_instance_for_mower_service_call(call):
+        mower_entity = call.data.get(CONF_MOWER_ENTITY, None)
         mower_serial = call.data.get(CONF_MOWER_SERIAL, None)
+    
+        if mower_entity is not None:
+            for config_entry_id in hass.data[DOMAIN]:
+                if config_entry_id == CONF_SERVICES_REGISTERED:
+                    continue
+    
+                instance = hass.data[DOMAIN][config_entry_id]
+                expected_entity_id = f"lawn_mower.indego_{instance.serial}"
+    
+                if mower_entity == expected_entity_id:
+                    return instance
+    
+            raise HomeAssistantError(
+                "No mower instance found for entity '%s'" % mower_entity
+            )
+    
         if mower_serial is None:
             # Return the first instance when params is missing for backwards compatibility.
             return hass.data[DOMAIN][hass.data[DOMAIN][CONF_SERVICES_REGISTERED]]
-
+    
         for config_entry_id in hass.data[DOMAIN]:
             if config_entry_id == CONF_SERVICES_REGISTERED:
                 continue
-
+    
             instance = hass.data[DOMAIN][config_entry_id]
             if instance.serial == mower_serial:
                 return instance
-
+    
         raise HomeAssistantError("No mower instance found for serial '%s'" % mower_serial)
 
     async def async_send_command(call):

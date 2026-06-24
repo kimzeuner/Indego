@@ -558,6 +558,10 @@
                     "name": "Mower Serial",
                     "description": "Mower serial. Only needed when you have configured multiple mowers."
                 },
+                "mower_entity": {
+                    "name": "Mower",
+                    "description": "Entity of the mower. Only required if multiple mowers are configured."
+                },
                 "command": {
                     "name": "Command",
                     "description": "Select a command to send to the mower."
@@ -571,6 +575,10 @@
                 "mower_serial": {
                     "name": "Mower Serial",
                     "description": "Mower serial. Only needed when you have configured multiple mowers."
+                },
+                "mower_entity": {
+                    "name": "Mower",
+                    "description": "Entity of the mower. Only required if multiple mowers are configured."
                 },
                 "enable": {
                     "name": "Enable",
@@ -586,6 +594,10 @@
                     "name": "Mower Serial",
                     "description": "Mower serial. Only needed when you have configured multiple mowers."
                 },
+                "mower_entity": {
+                    "name": "Mower",
+                    "description": "Entity of the mower. Only required if multiple mowers are configured."
+                },
                 "alert_index": {
                     "name": "Alert Index",
                     "description": "Delete the selected alert. 0 for the latest alert."
@@ -599,6 +611,10 @@
                 "mower_serial": {
                     "name": "Mower Serial",
                     "description": "Mower serial. Only needed when you have configured multiple mowers."
+                },
+                "mower_entity": {
+                    "name": "Mower",
+                    "description": "Entity of the mower. Only required if multiple mowers are configured."
                 }
             }
         },
@@ -609,6 +625,10 @@
                 "mower_serial": {
                     "name": "Mower Serial",
                     "description": "Mower serial. Only needed when you have configured multiple mowers."
+                },
+                "mower_entity": {
+                    "name": "Mower",
+                    "description": "Entity of the mower. Only required if multiple mowers are configured."
                 },
                 "alert_index": {
                     "name": "Alert Index",
@@ -623,6 +643,10 @@
                 "mower_serial": {
                     "name": "Mower Serial",
                     "description": "Mower serial. Only needed when you have configured multiple mowers."
+                },
+                "mower_entity": {
+                    "name": "Mower",
+                    "description": "Entity of the mower. Only required if multiple mowers are configured."
                 }
             }
         },
@@ -633,6 +657,10 @@
                 "mower_serial": {
                     "name": "Mower Serial",
                     "description": "Mower serial. Only needed when you have configured multiple mowers."
+                },
+                "mower_entity": {
+                    "name": "Mower",
+                    "description": "Entity of the mower. Only required if multiple mowers are configured."
                 }
             }
         },
@@ -643,6 +671,10 @@
                 "mower_serial": {
                     "name": "Serialnumber",
                     "description": "Serial number of the mower. Only required if multiple mowers are configured."
+                },
+                "mower_entity": {
+                    "name": "Mower",
+                    "description": "Entity of the mower. Only required if multiple mowers are configured."
                 },
                 "calendar_type": {
                     "name": "Calendar Type",

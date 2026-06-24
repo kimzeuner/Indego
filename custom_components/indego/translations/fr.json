@@ -555,7 +555,12 @@
             "description": "Envoyer des commandes à la tondeuse. Sélectionnez une commande.",
             "fields": {
                 "mower_serial": {
+                    "name": "Numéro de série",
                     "description": "Numéro de série de la tondeuse. Uniquement nécessaire si vous avez configuré plusieurs tondeuses."
+                },
+                "mower_entity": {
+                    "name": "Tondeuse",
+                    "description": "Entité de la tondeuse. Requise uniquement si plusieurs tondeuses sont configurées."
                 },
                 "command": {
                     "name": "Envoyer une commande",
@@ -568,7 +573,12 @@
             "description": "Activer ou désactiver le SmartMowing. Les valeurs autorisées sont true (activé) ou false (désactivé).",
             "fields": {
                 "mower_serial": {
+                    "name": "Numéro de série",
                     "description": "Numéro de série de la tondeuse. Uniquement nécessaire si vous avez configuré plusieurs tondeuses."
+                },
+                "mower_entity": {
+                    "name": "Tondeuse",
+                    "description": "Entité de la tondeuse. Requise uniquement si plusieurs tondeuses sont configurées."
                 },
                 "enable": {
                     "description": "Activer SmartMowing."
@@ -580,7 +590,12 @@
             "description": "Effacer l'alerte sélectionnée.",
             "fields": {
                 "mower_serial": {
+                    "name": "Numéro de série",
                     "description": "Numéro de série de la tondeuse. Uniquement nécessaire si vous avez configuré plusieurs tondeuses."
+                },
+                "mower_entity": {
+                    "name": "Tondeuse",
+                    "description": "Entité de la tondeuse. Requise uniquement si plusieurs tondeuses sont configurées."
                 },
                 "alert_index": {
                     "description": "Effacer l'alerte sélectionnée. 0 pour la dernière alerte."
@@ -592,7 +607,12 @@
             "description": "Effacer toutes les alertes.",
             "fields": {
                 "mower_serial": {
+                    "name": "Numéro de série",
                     "description": "Numéro de série de la tondeuse. Uniquement nécessaire si vous avez configuré plusieurs tondeuses."
+                },
+                "mower_entity": {
+                    "name": "Tondeuse",
+                    "description": "Entité de la tondeuse. Requise uniquement si plusieurs tondeuses sont configurées."
                 }
             }
         },
@@ -601,7 +621,12 @@
             "description": "Marquer l'alerte sélectionnée comme lue.",
             "fields": {
                 "mower_serial": {
+                    "name": "Numéro de série",
                     "description": "Numéro de série de la tondeuse. Uniquement nécessaire si vous avez configuré plusieurs tondeuses."
+                },
+                "mower_entity": {
+                    "name": "Tondeuse",
+                    "description": "Entité de la tondeuse. Requise uniquement si plusieurs tondeuses sont configurées."
                 },
                 "alert_index": {
                     "description": "Marquer l'alerte sélectionnée comme lue. 0 pour la dernière alerte."
@@ -613,7 +638,12 @@
             "description": "Marquer toutes les alertes comme lues.",
             "fields": {
                 "mower_serial": {
+                    "name": "Numéro de série",
                     "description": "Numéro de série de la tondeuse. Uniquement nécessaire si vous avez configuré plusieurs tondeuses."
+                },
+                "mower_entity": {
+                    "name": "Tondeuse",
+                    "description": "Entité de la tondeuse. Requise uniquement si plusieurs tondeuses sont configurées."
                 }
             }
         },
@@ -622,7 +652,12 @@
             "description": "Télécharge la carte de tonte actuelle depuis l'API Bosch Cloud et l'enregistre localement sous \"www/indego_map_base.svg\". La carte reflète l'itinéraire de tonte le plus récemment enregistré.",
             "fields": {
                 "mower_serial": {
+                    "name": "Numéro de série",
                     "description": "Numéro de série de la tondeuse. Uniquement nécessaire si vous avez configuré plusieurs tondeuses."
+                },
+                "mower_entity": {
+                    "name": "Tondeuse",
+                    "description": "Entité de la tondeuse. Requise uniquement si plusieurs tondeuses sont configurées."
                 }
             }
         },
@@ -633,6 +668,10 @@
                 "mower_serial": {
                     "name": "Numéro de série",
                     "description": "Numéro de série de la tondeuse. Nécessaire uniquement si plusieurs tondeuses sont configurées."
+                },
+                "mower_entity": {
+                    "name": "Tondeuse",
+                    "description": "Entité de la tondeuse. Requise uniquement si plusieurs tondeuses sont configurées."
                 },
                 "calendar_type": {
                     "name": "Type de calendrier",

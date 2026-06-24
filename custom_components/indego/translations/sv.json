@@ -555,7 +555,12 @@
             "description": "Skicka kommandon till gräsklipparen. Välj ett kommando.",
             "fields": {
                 "mower_serial": {
+                    "name": "Serienummer",
                     "description": "Gräsklippare serienummer. Krävs endast när du har flera gräsklippare konfigurerade."
+                },
+                "mower_entity": {
+                    "name": "Gräsklippare",
+                    "description": "Gräsklipparens entitet. Krävs endast om flera gräsklippare är konfigurerade."
                 },
                 "command": {
                     "name": "Skicka kommando",
@@ -568,7 +573,12 @@
             "description": "Aktivera eller inaktivera SmartMowing. Tillåtna värden är true eller false.",
             "fields": {
                 "mower_serial": {
+                    "name": "Serienummer",
                     "description": "Gräsklippare serienummer. Krävs endast när du har flera gräsklippare konfigurerade."
+                },
+                "mower_entity": {
+                    "name": "Gräsklippare",
+                    "description": "Gräsklipparens entitet. Krävs endast om flera gräsklippare är konfigurerade."
                 },
                 "enable": {
                     "description": "Aktivera SmartMowing."
@@ -580,7 +590,12 @@
             "description": "Radera den valda aviseringen.",
             "fields": {
                 "mower_serial": {
+                    "name": "Serienummer",
                     "description": "Gräsklippare serienummer. Krävs endast när du har flera gräsklippare konfigurerade."
+                },
+                "mower_entity": {
+                    "name": "Gräsklippare",
+                    "description": "Gräsklipparens entitet. Krävs endast om flera gräsklippare är konfigurerade."
                 },
                 "alert_index": {
                     "description": "Radera den valda aviseringen. 0 för den senaste aviseringen."
@@ -592,7 +607,12 @@
             "description": "Radera alla aviseringar.",
             "fields": {
                 "mower_serial": {
+                    "name": "Serienummer",
                     "description": "Gräsklippare serienummer. Krävs endast när du har flera gräsklippare konfigurerade."
+                },
+                "mower_entity": {
+                    "name": "Gräsklippare",
+                    "description": "Gräsklipparens entitet. Krävs endast om flera gräsklippare är konfigurerade."
                 }
             }
         },
@@ -601,7 +621,12 @@
             "description": "Markera den valda aviseringen som läst.",
             "fields": {
                 "mower_serial": {
+                    "name": "Serienummer",
                     "description": "Gräsklippare serienummer. Krävs endast när du har flera gräsklippare konfigurerade."
+                },
+                "mower_entity": {
+                    "name": "Gräsklippare",
+                    "description": "Gräsklipparens entitet. Krävs endast om flera gräsklippare är konfigurerade."
                 },
                 "alert_index": {
                     "description": "Markera den valda aviseringen som läst. 0 för den senaste aviseringen."
@@ -613,7 +638,12 @@
             "description": "Markera alla aviseringar som lästa.",
             "fields": {
                 "mower_serial": {
+                    "name": "Serienummer",
                     "description": "Gräsklippare serienummer. Krävs endast när du har flera gräsklippare konfigurerade."
+                },
+                "mower_entity": {
+                    "name": "Gräsklippare",
+                    "description": "Gräsklipparens entitet. Krävs endast om flera gräsklippare är konfigurerade."
                 }
             }
         },
@@ -622,7 +652,12 @@
             "description": "Hämtar den aktuella klippkartan från Bosch Cloud API och sparar den lokalt som \"www/indego_map_base.svg\". Kartan återspeglar den senast registrerade klippvägen.",
             "fields": {
                 "mower_serial": {
+                    "name": "Serienummer",
                     "description": "Gräsklippare serienummer. Krävs endast när du har flera gräsklippare konfigurerade."
+                },
+                "mower_entity": {
+                    "name": "Gräsklippare",
+                    "description": "Gräsklipparens entitet. Krävs endast om flera gräsklippare är konfigurerade."
                 }
             }
         },
@@ -633,6 +668,10 @@
                 "mower_serial": {
                     "name": "Serienummer",
                     "description": "Gräsklipparens serienummer. Krävs endast om flera gräsklippare är konfigurerade."
+                },
+                "mower_entity": {
+                    "name": "Gräsklippare",
+                    "description": "Gräsklipparens entitet. Krävs endast om flera gräsklippare är konfigurerade."
                 },
                 "calendar_type": {
                     "name": "Kalendertyp",

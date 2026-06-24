@@ -558,6 +558,10 @@
                     "name": "Seriennummer",
                     "description": "Seriennummer des Mähroboters. Wird nur benötigt, wenn mehrere Mähroboter eingerichtet sind."
                 },
+                "mower_entity": {
+                    "name": "Mäher",
+                    "description": "Entität des Mähroboters. Wird nur benötigt, wenn mehrere Mähroboter eingerichtet sind."
+                },
                 "command": {
                     "name": "Befehl senden",
                     "description": "Befehle an den Mähroboter senden. Wählen Sie einen Befehl aus."
@@ -571,6 +575,10 @@
                 "mower_serial": {
                     "name": "Seriennummer",
                     "description": "Seriennummer des Mähroboters. Wird nur benötigt, wenn mehrere Mähroboter eingerichtet sind."
+                },
+                "mower_entity": {
+                    "name": "Mäher",
+                    "description": "Entität des Mähroboters. Wird nur benötigt, wenn mehrere Mähroboter eingerichtet sind."
                 },
                 "enable": {
                     "name": "Aktivieren/Deaktivieren",
@@ -586,6 +594,10 @@
                     "name": "Seriennummer",
                     "description": "Seriennummer des Mähroboters. Wird nur benötigt, wenn mehrere Mähroboter eingerichtet sind."
                 },
+                "mower_entity": {
+                    "name": "Mäher",
+                    "description": "Entität des Mähroboters. Wird nur benötigt, wenn mehrere Mähroboter eingerichtet sind."
+                },
                 "alert_index": {
                     "name": "Fehler Index",
                     "description": "Den ausgewählten Fehler löschen. Mit 0 wird der letzte/aktuellste Fehler gelöscht."
@@ -599,6 +611,10 @@
                 "mower_serial": {
                     "name": "Seriennummer",
                     "description": "Seriennummer des Mähroboters. Wird nur benötigt, wenn mehrere Mähroboter eingerichtet sind."
+                },
+                "mower_entity": {
+                    "name": "Mäher",
+                    "description": "Entität des Mähroboters. Wird nur benötigt, wenn mehrere Mähroboter eingerichtet sind."
                 }
             }
         },
@@ -609,6 +625,10 @@
                 "mower_serial": {
                     "name": "Seriennummer",
                     "description": "Seriennummer des Mähroboters. Wird nur benötigt, wenn mehrere Mähroboter eingerichtet sind."
+                },
+                "mower_entity": {
+                    "name": "Mäher",
+                    "description": "Entität des Mähroboters. Wird nur benötigt, wenn mehrere Mähroboter eingerichtet sind."
                 },
                 "alert_index": {
                     "name": "Fehler Index",
@@ -623,6 +643,10 @@
                 "mower_serial": {
                     "name": "Seriennummer",
                     "description": "Seriennummer des Mähroboters. Wird nur benötigt, wenn mehrere Mähroboter eingerichtet sind."
+                },
+                "mower_entity": {
+                    "name": "Mäher",
+                    "description": "Entität des Mähroboters. Wird nur benötigt, wenn mehrere Mähroboter eingerichtet sind."
                 }
             }
         },
@@ -633,6 +657,10 @@
                 "mower_serial": {
                     "name": "Seriennummer",
                     "description": "Seriennummer des Mähroboters. Wird nur benötigt, wenn mehrere Mähroboter eingerichtet sind."
+                },
+                "mower_entity": {
+                    "name": "Mäher",
+                    "description": "Entität des Mähroboters. Wird nur benötigt, wenn mehrere Mähroboter eingerichtet sind."
                 }
             }
         },
@@ -643,6 +671,10 @@
                 "mower_serial": {
                     "name": "Seriennummer",
                     "description": "Seriennummer des Mähroboters. Wird nur benötigt, wenn mehrere Mähroboter eingerichtet sind."
+                },
+                "mower_entity": {
+                    "name": "Mäher",
+                    "description": "Entität des Mähroboters. Wird nur benötigt, wenn mehrere Mähroboter eingerichtet sind."
                 },
                 "calendar_type": {
                     "name": "Kalender Typ",
@@ -677,6 +709,10 @@
                 "mower_serial": {
                     "name": "Seriennummer",
                     "description": "Seriennummer des Mähroboters. Wird nur benötigt, wenn mehrere Mähroboter eingerichtet sind."
+                },
+                "mower_entity": {
+                    "name": "Mäher",
+                    "description": "Entität des Mähroboters. Wird nur benötigt, wenn mehrere Mähroboter eingerichtet sind."
                 },
                 "earliest_start": {
                     "name": "Frühester Start",

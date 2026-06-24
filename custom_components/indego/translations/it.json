@@ -555,7 +555,12 @@
             "description": "Invia comandi al robot. Seleziona un comando.",
             "fields": {
                 "mower_serial": {
+                    "name": "Numero di serie",
                     "description": "Numero di serie del rasaerba. Necessario solo quando hai configurato più rasaerba."
+                },
+                "mower_entity": {
+                    "name": "Rasaerba",
+                    "description": "Entità del rasaerba. Necessaria solo se sono configurati più rasaerba."
                 },
                 "command": {
                     "name": "Invia comando",
@@ -568,7 +573,12 @@
             "description": "Abilita o disabilita SmartMowing. I valori consentiti sono true o false.",
             "fields": {
                 "mower_serial": {
+                    "name": "Numero di serie",
                     "description": "Numero di serie del rasaerba. Necessario solo quando hai configurato più rasaerba."
+                },
+                "mower_entity": {
+                    "name": "Rasaerba",
+                    "description": "Entità del rasaerba. Necessaria solo se sono configurati più rasaerba."
                 },
                 "enable": {
                     "description": "Abilita SmartMowing."
@@ -580,7 +590,12 @@
             "description": "Elimina l'avviso selezionato.",
             "fields": {
                 "mower_serial": {
+                    "name": "Numero di serie",
                     "description": "Numero di serie del rasaerba. Necessario solo quando hai configurato più rasaerba."
+                },
+                "mower_entity": {
+                    "name": "Rasaerba",
+                    "description": "Entità del rasaerba. Necessaria solo se sono configurati più rasaerba."
                 },
                 "alert_index": {
                     "description": "Elimina l'avviso selezionato. 0 per l'avviso più recente."
@@ -592,7 +607,12 @@
             "description": "Elimina tutti gli avvisi.",
             "fields": {
                 "mower_serial": {
+                    "name": "Numero di serie",
                     "description": "Numero di serie del rasaerba. Necessario solo quando hai configurato più rasaerba."
+                },
+                "mower_entity": {
+                    "name": "Rasaerba",
+                    "description": "Entità del rasaerba. Necessaria solo se sono configurati più rasaerba."
                 }
             }
         },
@@ -601,7 +621,12 @@
             "description": "Segna l'avviso selezionato come letto.",
             "fields": {
                 "mower_serial": {
+                    "name": "Numero di serie",
                     "description": "Numero di serie del rasaerba. Necessario solo quando hai configurato più rasaerba."
+                },
+                "mower_entity": {
+                    "name": "Rasaerba",
+                    "description": "Entità del rasaerba. Necessaria solo se sono configurati più rasaerba."
                 },
                 "alert_index": {
                     "description": "Segna l'avviso selezionato come letto. 0 per l'avviso più recente."
@@ -613,7 +638,12 @@
             "description": "Segna tutti gli avvisi come letti.",
             "fields": {
                 "mower_serial": {
+                    "name": "Numero di serie",
                     "description": "Numero di serie del rasaerba. Necessario solo quando hai configurato più rasaerba."
+                },
+                "mower_entity": {
+                    "name": "Rasaerba",
+                    "description": "Entità del rasaerba. Necessaria solo se sono configurati più rasaerba."
                 }
             }
         },
@@ -622,7 +652,12 @@
             "description": "Scarica la mappa di taglio attuale dall'API Bosch Cloud e la salva localmente come \"www/indego_map_base.svg\". La mappa riflette il percorso di taglio registrato più di recente.",
             "fields": {
                 "mower_serial": {
+                    "name": "Numero di serie",
                     "description": "Numero di serie del rasaerba. Necessario solo quando hai configurato più rasaerba."
+                },
+                "mower_entity": {
+                    "name": "Rasaerba",
+                    "description": "Entità del rasaerba. Necessaria solo se sono configurati più rasaerba."
                 }
             }
         },
@@ -633,6 +668,10 @@
                 "mower_serial": {
                     "name": "Numero di serie",
                     "description": "Numero di serie del rasaerba. Necessario solo se sono configurati più rasaerba."
+                },
+                "mower_entity": {
+                    "name": "Rasaerba",
+                    "description": "Entità del rasaerba. Necessaria solo se sono configurati più rasaerba."
                 },
                 "calendar_type": {
                     "name": "Tipo di calendario",
